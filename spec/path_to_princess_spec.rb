@@ -1,3 +1,5 @@
+require './lib/save_princess.rb'
+
 describe SavePrincess do
   context 'instance methods' do
     it '#displayPathtoPrincess(n, grid) - returns the directional moves required to rescue the princess' do
