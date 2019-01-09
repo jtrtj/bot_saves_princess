@@ -29,7 +29,7 @@ describe PathFinder do
     it 'starts with a DungeonMap' do
       path_finder = PathFinder.new(@map_1)
 
-      expect(path_finder.instance_variable_get(:map)).to eq(@map_1)
+      expect(path_finder.instance_variable_get(:@dungeon_map)).to eq(@map_1)
     end
   end
 end
