@@ -4,10 +4,10 @@ class PathFinder
   end
 
   def moves
-    trajectory = define_trajectory
+    trajectory = trajectory
   end
 
-  def define_trajectory
+  def trajectory
     mario_coordinates = @dungeon_map.character_coordinates("m")
     princess_coordinates = @dungeon_map.character_coordinates("p")
     [(mario_coordinates.first - princess_coordinates.first), (mario_coordinates.last - princess_coordinates.last)]

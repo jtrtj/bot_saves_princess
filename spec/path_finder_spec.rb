@@ -41,10 +41,10 @@ describe PathFinder do
       expect(@path_finder.moves).to eq(expected_moves)
     end
 
-    it "#define_trajectory - returns the difference between mario and peach's coordiantes" do
+    it "#trajectory - returns the difference between mario and peach's coordiantes" do
       expected_trajectory = [4,3]
 
-      expect(@path_finder.define_trajectory).to eq(expected_trajectory)
+      expect(@path_finder.trajectory).to eq(expected_trajectory)
     end
   end
 end
