@@ -36,7 +36,7 @@ describe PathFinder do
 
   context 'instance methods' do
     it '#moves - returns a list of moves required for mario to reach peach' do
-      expected_moves = ["UP","UP","UP","UP","LEFT","LEFT","LEFT"]
+      expected_moves = ['UP','UP','UP','UP','LEFT','LEFT','LEFT']
 
       expect(@path_finder.moves).to eq(expected_moves)
     end
@@ -45,6 +45,16 @@ describe PathFinder do
       expected_trajectory = [4,3]
 
       expect(@path_finder.trajectory).to eq(expected_trajectory)
+    end
+
+    it '#trajectory_to_moves - tranlates trajectory values to moves' do
+      trajectory_1 = [0,1]
+      trajectory_2 = [-2,-3]
+      trajectory_3 = [4,3]
+
+      expect(@path_finder.trajectory_to_moves(trajectory_1)).to eq(['LEFT'])
+      expect(@path_finder.trajectory_to_moves(trajectory_2)).to eq(['DOWN','DOWN','RIGHT','RIGHT','RIGHT'])
+      expect(@path_finder.trajectory_to_moves(trajectory_3)).to eq(['UP','UP','UP','UP','LEFT','LEFT','LEFT'])
     end
   end
 end

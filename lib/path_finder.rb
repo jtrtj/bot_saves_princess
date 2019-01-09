@@ -4,7 +4,31 @@ class PathFinder
   end
 
   def moves
-    trajectory = trajectory
+    trajectory_to_moves(trajectory)
+  end
+
+  def trajectory_to_moves(trajectory)
+    moves = Array.new
+        if trajectory.first >= 0
+            (trajectory.first.abs).times do
+                moves << "UP"
+            end
+        else
+            (trajectory.first.abs).times do
+                moves << "DOWN"
+            end
+        end
+        
+        if trajectory.last >= 0
+            (trajectory.last.abs).times do
+                moves << "LEFT"
+            end
+        else
+            (trajectory.last.abs).times do
+                moves << "RIGHT"
+            end
+        end
+      return moves
   end
 
   def trajectory
