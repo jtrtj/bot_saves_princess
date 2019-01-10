@@ -34,7 +34,8 @@ class PathFinder
   def trajectory
     mario_coordinates = @dungeon_map.character_coordinates("m")
     princess_coordinates = @dungeon_map.character_coordinates("p")
-    [(mario_coordinates.row_index - princess_coordinates.row_index),
-     (mario_coordinates.column_index - princess_coordinates.column_index)]
+    row_difference = mario_coordinates.row_index - princess_coordinates.row_index
+    column_difference = mario_coordinates.column_index - princess_coordinates.column_index
+    Trajectory.new(row_index_difference, column_index_difference)
   end
 end
