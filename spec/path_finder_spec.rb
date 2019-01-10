@@ -36,12 +36,12 @@ describe PathFinder do
 
   context 'instance methods' do
     it '#moves - returns a list of moves required for mario to reach peach' do
-      expected_moves = ['UP','UP','UP','UP','LEFT','LEFT','LEFT']
+      expected_moves = %w[UP UP UP UP LEFT LEFT LEFT]
 
       expect(@path_finder.moves).to eq(expected_moves)
     end
 
-    it "#establish_trajectory - creates a new trajectory according to the map data" do
+    it '#establish_trajectory - creates a new trajectory according to the map data' do
       trajectory = @path_finder.establish_trajectory
 
       expect(trajectory).to be_a(Trajectory)
