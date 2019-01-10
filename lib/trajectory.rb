@@ -3,5 +3,6 @@ class Trajectory
   def initialize(row_index_difference, column_index_difference)
     @row_index_difference = row_index_difference
     @column_index_difference = column_index_difference
+    @moves = Array.new
   end
 end
