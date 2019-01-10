@@ -13,7 +13,7 @@ class Trajectory
 
   def determine_vertical_moves
     if @row_index_difference >= 0
-      @row_index_difference.abs.times do
+      @row_index_difference.times do
         @moves << 'UP'
       end
     else
@@ -25,7 +25,7 @@ class Trajectory
 
   def determine_horizontal_moves
     if @column_index_difference >= 0
-      @column_index_difference.abs.times do
+      @column_index_difference.times do
         @moves << 'LEFT'
       end
     else
