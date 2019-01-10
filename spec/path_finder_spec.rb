@@ -28,7 +28,7 @@ describe PathFinder do
   end
 
   context 'instance variables' do
-    it 'starts with a DungeonMap' do
+    it '@dungeon_map' do
       expect(@path_finder_1.instance_variable_get(:@dungeon_map)).to eq(@map_1)
     end
   end
