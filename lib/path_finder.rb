@@ -9,30 +9,6 @@ class PathFinder
     trajectory.moves
   end
 
-  def trajectory_to_moves(trajectory)
-    moves = Array.new
-        if trajectory.row_index_difference >= 0
-            (trajectory.row_index_difference.abs).times do
-                moves << "UP"
-            end
-        else
-            (trajectory.row_index_difference.abs).times do
-                moves << "DOWN"
-            end
-        end
-        
-        if trajectory.column_index_difference >= 0
-            (trajectory.column_index_difference.abs).times do
-                moves << "LEFT"
-            end
-        else
-            (trajectory.column_index_difference.abs).times do
-                moves << "RIGHT"
-            end
-        end
-      return moves
-  end
-
   def establish_trajectory
     mario_coordinates = @dungeon_map.character_coordinates("m")
     princess_coordinates = @dungeon_map.character_coordinates("p")

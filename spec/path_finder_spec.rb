@@ -46,15 +46,5 @@ describe PathFinder do
 
       expect(trajectory).to be_a(Trajectory)
     end
-
-    it '#trajectory_to_moves - tranlates trajectory values to moves' do
-      trajectory_1 = Trajectory.new(0,1)
-      trajectory_2 = Trajectory.new(-2,-3)
-      trajectory_3 = Trajectory.new(4,3)
-
-      expect(@path_finder.trajectory_to_moves(trajectory_1)).to eq(['LEFT'])
-      expect(@path_finder.trajectory_to_moves(trajectory_2)).to eq(['DOWN','DOWN','RIGHT','RIGHT','RIGHT'])
-      expect(@path_finder.trajectory_to_moves(trajectory_3)).to eq(['UP','UP','UP','UP','LEFT','LEFT','LEFT'])
-    end
   end
 end
