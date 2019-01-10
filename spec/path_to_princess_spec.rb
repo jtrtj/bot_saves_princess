@@ -10,7 +10,7 @@ describe SavePrincess do
         '-m-',
         'p--'
       ]
-      expected = ['DOWN', 'LEFT']
+      expected = %w[DOWN LEFT]
 
       expect(save_princess.displayPathtoPrincess(n, grid)).to eq(expected)
     end

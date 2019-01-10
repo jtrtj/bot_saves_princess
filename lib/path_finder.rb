@@ -4,37 +4,30 @@ class PathFinder
   end
 
   def moves
-    trajectory_to_moves(trajectory)
+    trajectory = establish_trajectory
+    trajectory.determine_moves
+    trajectory.moves
   end
 
-  def trajectory_to_moves(trajectory)
-    moves = Array.new
-        if trajectory.first >= 0
-            (trajectory.first.abs).times do
-                moves << "UP"
-            end
-        else
-            (trajectory.first.abs).times do
-                moves << "DOWN"
-            end
-        end
-        
-        if trajectory.last >= 0
-            (trajectory.last.abs).times do
-                moves << "LEFT"
-            end
-        else
-            (trajectory.last.abs).times do
-                moves << "RIGHT"
-            end
-        end
-      return moves
+  def establish_trajectory
+    Trajectory.new(row_index_difference, column_index_difference)
   end
 
-  def trajectory
-    mario_coordinates = @dungeon_map.character_coordinates("m")
-    princess_coordinates = @dungeon_map.character_coordinates("p")
-    [(mario_coordinates.row_index - princess_coordinates.row_index),
-     (mario_coordinates.column_index - princess_coordinates.column_index)]
+  private
+
+  def row_index_difference
+    mario_coordinates.row_index - princess_coordinates.row_index
+  end
+
+  def column_index_difference
+    mario_coordinates.column_index - princess_coordinates.column_index
+  end
+
+  def mario_coordinates
+    @mario_coordinates ||= @dungeon_map.character_coordinates('m')
+  end
+
+  def princess_coordinates
+    @princess_coordinates ||= @dungeon_map.character_coordinates('p')
   end
 end
