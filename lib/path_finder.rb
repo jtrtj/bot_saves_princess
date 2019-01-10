@@ -4,7 +4,9 @@ class PathFinder
   end
 
   def moves
-    trajectory_to_moves(trajectory)
+    trajectory = establish_trajectory
+    trajectory.determine_moves
+    trajectory.moves
   end
 
   def trajectory_to_moves(trajectory)
@@ -31,7 +33,7 @@ class PathFinder
       return moves
   end
 
-  def trajectory
+  def establish_trajectory
     mario_coordinates = @dungeon_map.character_coordinates("m")
     princess_coordinates = @dungeon_map.character_coordinates("p")
     row_index_difference = mario_coordinates.row_index - princess_coordinates.row_index

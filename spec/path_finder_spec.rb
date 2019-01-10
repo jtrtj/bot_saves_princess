@@ -41,11 +41,10 @@ describe PathFinder do
       expect(@path_finder.moves).to eq(expected_moves)
     end
 
-    it "#trajectory - returns the difference between mario and peach's coordiantes" do
-      expected_trajectory = Trajectory.new(4,3)
+    it "#establish_trajectory - creates a new trajectory according to the map data" do
+      trajectory = @path_finder.establish_trajectory
 
-      expect(@path_finder.trajectory.row_index_difference).to eq(expected_trajectory.row_index_difference)
-      expect(@path_finder.trajectory.column_index_difference).to eq(expected_trajectory.column_index_difference)
+      expect(trajectory).to be_a(Trajectory)
     end
 
     it '#trajectory_to_moves - tranlates trajectory values to moves' do
