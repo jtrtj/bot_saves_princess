@@ -14,7 +14,7 @@ describe PathFinder do
       '----------',
       '----------',
       '----------',
-      '-------m--',
+      '-m--------',
       '----------',
       '----------',
       '----------',
@@ -29,25 +29,29 @@ describe PathFinder do
 
   context 'instance variables' do
     it 'starts with a DungeonMap' do
-      path_finder = PathFinder.new(@map_1)
-
-      expect(path_finder.instance_variable_get(:@dungeon_map)).to eq(@map_1)
+      expect(@path_finder_1.instance_variable_get(:@dungeon_map)).to eq(@map_1)
     end
   end
 
   context 'instance methods' do
     it '#moves - returns a list of moves required for mario to reach peach' do
-      expected_moves = %w[UP UP UP UP LEFT LEFT LEFT]
+      expected_moves_1 = %w[DOWN LEFT]
+      expected_moves_2 = %w[UP UP UP UP RIGHT RIGHT RIGHT]
 
-      expect(@path_finder_2.moves).to eq(expected_moves)
+      expect(@path_finder_1.moves).to eq(expected_moves_1)
+      expect(@path_finder_2.moves).to eq(expected_moves_2)
     end
 
     it '#establish_trajectory - creates a new trajectory according to the map data' do
-      trajectory = @path_finder_1.establish_trajectory
+      trajectory_1 = @path_finder_1.establish_trajectory
+      trajectory_2 = @path_finder_2.establish_trajectory
 
-      expect(trajectory).to be_a(Trajectory)
-      expect(trajectory.row_index_difference).to eq(-1)
-      expect(trajectory.column_index_difference).to eq(1)
+      expect(trajectory_1).to be_a(Trajectory)
+      expect(trajectory_1.row_index_difference).to eq(-1)
+      expect(trajectory_1.column_index_difference).to eq(1)
+      expect(trajectory_2).to be_a(Trajectory)
+      expect(trajectory_2.row_index_difference).to eq(4)
+      expect(trajectory_2.column_index_difference).to eq(-3)
     end
   end
 end
