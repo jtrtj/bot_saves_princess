@@ -1,21 +1,49 @@
 ## Bot Saves Princess I and II solution
 
-This repo represents my solution to HackerRank's [Bot saves princess](https://www.hackerrank.com/challenges/saveprincess/problem) & [Bot saves princess - 2](https://www.hackerrank.com/challenges/saveprincess2/problem)
+#### This repo represents my solution to HackerRank's <a href="https://www.hackerrank.com/challenges/saveprincess/problem" target="_blank">Bot saves princess</a> & <a href="https://www.hackerrank.com/challenges/saveprincess2/problem" target="_blank">Bot saves princess - 2</a>
+
+Given a grid, representing a dungeon with a bot('m') and a princess('p') marked on it, this code will find the necessary moves the bot must take to reach the princess.
+
+For example:
+  
+  given this grid as __input__:
+
+  ~~~ruby
+  [
+    '----------',
+    '----p-----',
+    '----------',
+    '----------',
+    '----------',
+    '-m--------',
+    '----------',
+    '----------',
+    '----------',
+    '----------'
+  ]
+  ~~~
+  
+  the system will __output__:
+  ~~~ruby
+  ['UP', 'UP', 'UP', 'UP', 'RIGHT', 'RIGHT', 'RIGHT']
+  ~~~
 
 It was written using [Ruby 2.5.3](https://www.ruby-lang.org/en/news/2018/10/18/ruby-2-5-3-released/)
 
-To check it out on your local machine:
+### To check it out on your local machine:
   1. Clone this repository
   2. `$ cd bot_saves_princess`
   3. `$ bundle install`
   4. `$ rspec` - to checkout the test suite
   5. Code coverage can be viewed in `coverage/index.html` after running RSpec
 
-To run it against HackerRank's test suite:
-  1. Navigate to [https://www.hackerrank.com/challenges/saveprincess/problem](https://www.hackerrank.com/challenges/saveprincess/problem)
+### To run it against HackerRank's test suite:
+* ### Bot saves princess
+  1. Navigate to <a href="https://www.hackerrank.com/challenges/saveprincess/problem" target="_blank">https://www.hackerrank.com/challenges/saveprincess/problem</a>
+
   2. Replace all of the code in the "Current Buffer" textbox with this snippet:
 
-        ~~~ruby 
+        ```ruby 
         #!/bin/ruby
 
         def displayPathtoPrincess(n,grid)
@@ -141,11 +169,16 @@ To run it against HackerRank's test suite:
         end
 
         displayPathtoPrincess(m,grid)
-        ~~~
+        ```
+
     3. Then click "Run Code"
-    4. Navigate to [https://www.hackerrank.com/challenges/saveprincess2/problem](https://www.hackerrank.com/challenges/saveprincess2/problem)
-    5. Replace all of the code in the "Current Buffer" textbox with this snippet:
-        ~~~ruby
+* ### Bot save Princess - 2
+
+    1. Navigate to <a href="https://www.hackerrank.com/challenges/saveprincess2/problem" target="_blank">https://www.hackerrank.com/challenges/saveprincess2/problem</a>
+
+    2. Replace all of the code in the "Current Buffer" textbox with this snippet:
+
+        ```ruby
         #!/bin/ruby
 
         def nextMove(n,r,c,grid)
@@ -277,5 +310,6 @@ To run it against HackerRank's test suite:
         end
 
         nextMove(n,r,c,grid)
-        ~~~
-    6. Then click "Run Code"
+        ```
+
+    3. Then click "Run Code"
