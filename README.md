@@ -170,11 +170,11 @@ To run it against HackerRank's test suite:
         displayPathtoPrincess(m,grid)
         ~~~
 
-    1. Then click "Run Code"
-    2. Navigate to <a href="https://www.hackerrank.com/challenges/saveprincess2/problem" target="_blank">https://www.hackerrank.com/challenges/saveprincess2/problem</a>
+    3. Then click "Run Code"
+    4. Navigate to <a href="https://www.hackerrank.com/challenges/saveprincess2/problem" target="_blank">https://www.hackerrank.com/challenges/saveprincess2/problem</a>
 
-    3. Replace all of the code in the "Current Buffer" textbox with this snippet:
-    
+    5. Replace all of the code in the "Current Buffer" textbox with this snippet:
+
         ~~~ruby
         #!/bin/ruby
 
@@ -309,4 +309,4 @@ To run it against HackerRank's test suite:
         nextMove(n,r,c,grid)
         ~~~
 
-    4. Then click "Run Code"
+    6. Then click "Run Code"
