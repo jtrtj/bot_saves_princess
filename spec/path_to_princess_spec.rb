@@ -9,6 +9,7 @@ describe SavePrincess do
       grid_examples = GridExamples.new
       @sml_grids = grid_examples.sml_grids
       @med_grids = grid_examples.med_grids
+      @lrg_grids = grid_examples.lrg_grids
       @next_move_grids = grid_examples.next_move_grids
 
       @save_princess = SavePrincess.new
@@ -24,6 +25,10 @@ describe SavePrincess do
       expect(@save_princess.displayPathtoPrincess(@med_grids[:grid_2])).to eq(@med_grids[:grid_2_solution])
       expect(@save_princess.displayPathtoPrincess(@med_grids[:grid_3])).to eq(@med_grids[:grid_3_solution])
       expect(@save_princess.displayPathtoPrincess(@med_grids[:grid_4])).to eq(@med_grids[:grid_4_solution])
+
+
+      expect(@save_princess.displayPathtoPrincess(@lrg_grids[:grid_1])).to eq(@lrg_grids[:grid_1_solution])
+      expect(@save_princess.displayPathtoPrincess(@lrg_grids[:grid_2])).to eq(@lrg_grids[:grid_2_solution])
     end
 
     it '#nextMove(grid) - returns the next directional move to rescue the princess' do
