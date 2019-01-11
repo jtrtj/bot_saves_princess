@@ -11,7 +11,7 @@ describe SavePrincess do
       @med_grids = grid_examples.med_grids
     end
 
-    it '#displayPathtoPrincess(n, grid) - returns the directional moves required to rescue the princess' do
+    it '#displayPathtoPrincess(grid) - returns the directional moves required to rescue the princess' do
       save_princess = SavePrincess.new
 
       expect(save_princess.displayPathtoPrincess(@sml_grids[:grid_1])).to eq(@sml_grids[:grid_1_solution])
@@ -25,7 +25,7 @@ describe SavePrincess do
       expect(save_princess.displayPathtoPrincess(@med_grids[:grid_4])).to eq(@med_grids[:grid_4_solution])
     end
 
-    it '#nextMove(n, r, c, grid) - returns the next directional move to rescue the princess' do
+    it '#nextMove(grid) - returns the next directional move to rescue the princess' do
       grid = [
         '-----',
         '-----',
