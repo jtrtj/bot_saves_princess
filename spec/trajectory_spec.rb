@@ -2,16 +2,17 @@ require './lib/trajectory.rb'
 
 describe Trajectory do
   context 'instance variables' do
-    it 'starts with @row_index_difference, @column_index_difference and @moves' do
+    it '@row_index_difference, @column_index_difference and @moves' do
       trajectory = Trajectory.new(-1, 2)
-      expect(trajectory.instance_variable_get(:@row_index_difference)).to eq(-1)
-      expect(trajectory.instance_variable_get(:@column_index_difference)).to eq(2)
-      expect(trajectory.instance_variable_get(:@moves)).to eq([])
+
+      expect(trajectory.row_index_difference).to eq(-1)
+      expect(trajectory.column_index_difference).to eq(2)
+      expect(trajectory.moves).to eq([])
     end
   end
 
   context 'instance methods' do
-    it '#determine_moves - adds moves in order they should be executed' do
+    it '#determine_moves - translates grid trajectory to sequence of DOWN, UP, LEFT or RIGHT moves' do
       trajectory_1 = Trajectory.new(0, 1)
       trajectory_2 = Trajectory.new(-2, -3)
       trajectory_3 = Trajectory.new(4, 3)
