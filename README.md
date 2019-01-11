@@ -39,6 +39,7 @@ To check it out on your local machine:
 
 To run it against HackerRank's test suite:
   1. Navigate to <a href="https://www.hackerrank.com/challenges/saveprincess/problem" target="_blank">https://www.hackerrank.com/challenges/saveprincess/problem</a>
+
   2. Replace all of the code in the "Current Buffer" textbox with this snippet:
 
         ~~~ruby 
@@ -168,9 +169,12 @@ To run it against HackerRank's test suite:
 
         displayPathtoPrincess(m,grid)
         ~~~
+
     1. Then click "Run Code"
     2. Navigate to <a href="https://www.hackerrank.com/challenges/saveprincess2/problem" target="_blank">https://www.hackerrank.com/challenges/saveprincess2/problem</a>
+
     3. Replace all of the code in the "Current Buffer" textbox with this snippet:
+    
         ~~~ruby
         #!/bin/ruby
 
