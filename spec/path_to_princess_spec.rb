@@ -25,5 +25,21 @@ describe SavePrincess do
       expect(save_princess.displayPathtoPrincess(n, @med_grids[:grid_3])).to eq(@med_grids[:grid_3_solution])
       expect(save_princess.displayPathtoPrincess(n, @med_grids[:grid_4])).to eq(@med_grids[:grid_4_solution])
     end
+
+    it '#nextMove(n, r, c, grid) - returns the next directional move to rescue the princess' do
+      n = 5
+      r = 2
+      c = 3
+      grid = [
+        '-----',
+        '-----',
+        'p--m-',
+        '-----',
+        '-----'
+      ]
+      save_princess = SavePrincess.new
+      
+      expect(save_princess.nextMove(n, r, c, grid)).to eq('LEFT')
+    end
   end
 end
