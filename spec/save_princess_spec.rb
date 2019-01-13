@@ -26,7 +26,6 @@ describe SavePrincess do
       expect(@save_princess.displayPathtoPrincess(@med_grids[:grid_3])).to eq(@med_grids[:grid_3_solution])
       expect(@save_princess.displayPathtoPrincess(@med_grids[:grid_4])).to eq(@med_grids[:grid_4_solution])
 
-
       expect(@save_princess.displayPathtoPrincess(@lrg_grids[:grid_1])).to eq(@lrg_grids[:grid_1_solution])
       expect(@save_princess.displayPathtoPrincess(@lrg_grids[:grid_2])).to eq(@lrg_grids[:grid_2_solution])
     end
@@ -35,7 +34,7 @@ describe SavePrincess do
       expect(@save_princess.nextMove(@next_move_grids[:grid_1])).to eq(@next_move_grids[:grid_1_solution])
       expect(@save_princess.nextMove(@next_move_grids[:grid_2])).to eq(@next_move_grids[:grid_2_solution])
       expect(@save_princess.nextMove(@next_move_grids[:grid_3])).to eq(@next_move_grids[:grid_3_solution])
-      expect(@save_princess.nextMove(@next_move_grids[:grid_4])).to eq(@next_move_grids[:grid_4_solution]) 
+      expect(@save_princess.nextMove(@next_move_grids[:grid_4])).to eq(@next_move_grids[:grid_4_solution])
     end
   end
 end

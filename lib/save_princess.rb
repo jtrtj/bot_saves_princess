@@ -1,3 +1,6 @@
+require_relative 'dungeon_map.rb'
+require_relative 'path_finder.rb'
+
 class SavePrincess
   def displayPathtoPrincess(grid)
     map = DungeonMap.new(grid)

@@ -1,3 +1,5 @@
+require_relative 'coordinates.rb'
+
 class DungeonMap
   def initialize(grid)
     @grid = grid
