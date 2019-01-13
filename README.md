@@ -28,15 +28,17 @@ For example:
   ['UP', 'UP', 'UP', 'UP', 'RIGHT', 'RIGHT', 'RIGHT']
   ~~~
 
-It was written using [Ruby 2.5.3](https://www.ruby-lang.org/en/news/2018/10/18/ruby-2-5-3-released/)
+### Ruby Version
+[2.5.3](https://www.ruby-lang.org/en/news/2018/10/18/ruby-2-5-3-released/)
 
 ### To check it out on your local machine:
   1. Clone this repository
   2. `$ cd bot_saves_princess`
-  3. `$ bundle install`
+  3. `$ bundle install` *
   4. `$ rspec` - to checkout the test suite
   5. Code coverage can be viewed in `coverage/index.html` after running RSpec
 
+  \* may require update to [Bundler 2](https://bundler.io/blog/2019/01/04/an-update-on-the-bundler-2-release.html) (`$ gem install bundler` then `$ bundler -v` to confirm version)
 ### To run it against HackerRank's test suite:
 * ### Bot saves princess
   1. Navigate to <a href="https://www.hackerrank.com/challenges/saveprincess/problem" target="_blank">https://www.hackerrank.com/challenges/saveprincess/problem</a>
@@ -171,7 +173,7 @@ It was written using [Ruby 2.5.3](https://www.ruby-lang.org/en/news/2018/10/18/r
         displayPathtoPrincess(m,grid)
         ```
 
-    3. Then click "Run Code"
+    1. Then click "Run Code"
 * ### Bot save Princess - 2
 
     1. Navigate to <a href="https://www.hackerrank.com/challenges/saveprincess2/problem" target="_blank">https://www.hackerrank.com/challenges/saveprincess2/problem</a>
